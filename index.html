@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Snippet Cheatsheet</h1>
+        <p>My styles, let me show them to you!</p>
+    </header>
+    <main>
+        <section class="card">
+            <h2>Vertically centered flexbox</h2>
+            <p>Vertical centering is no longer impossible!</p>
+            <pre>.card{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}</pre>
+        </section>
+        <section class="card">
+            <h2>Using Variables</h2>
+            <p>Create CSS variable to easily reuse colors</p>
+            <pre>:root{
+    --primary:rgb(82, 79, 79);
+    --secondary:rgb(225, 127, 247);
+    --accent:white;
+}</pre>
+        </section>
+        <section class="card">
+            <h2>Glowy shadow</h2>
+            <p>create a cool glow effect for your cards using box-shadow!</p>
+            <pre>.card {
+    transition: box-shadow 0.7s;
+}
+.card:hover, .card:hover h2{
+    box-shadow:0px 0px 10px 4px var(--secondary), 
+    0px 0px 10px 4px var(--secondary) inset;
+}</pre>
+        </section>
+        <section class="card">
+            <h2>Two-tone Gradient</h2>
+            <p>Use a linear gradient to create a cool two-tone effect</p>
+            <pre>pre {
+    background:linear-gradient(
+    120deg,
+    deeppink 0%,
+    deeppink 50%,
+    deepskyblue 50%);
+}</pre>
+        </section>
+        <section class="card">
+            <h2>Overlay title on card</h2>
+            <p>put the card title on top of the border!</p>
+            <pre>.card h2{
+    position: relative;
+    bottom:18px;
+    padding:5px;
+}</pre>
+        </section>
+        <section class="card">
+            <h2>Force Footer to Bottom</h2>
+            <p>No more footers in middle of page</p>
+            <pre>header,footer {
+    min-height: 15vh;
+}
+
+main{
+    min-height:70vh;
+}</pre>
+        </section>
+    </main>
+    <footer>
+        <h2>Made with ♥︎ and CSS</h2>
+    </footer>
+</body>
+</html>

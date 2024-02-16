@@ -1,0 +1,89 @@
+:root{
+    --primary:rgb(82, 79, 79);
+    --secondary:rgb(113, 219, 225);
+    --accent:white;
+}
+
+*{
+    margin: 0;
+    padding:0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color:var(--secondary)
+}
+
+body {
+    background-color: var(--primary)
+}
+
+header,footer {
+    min-height: 15vh;
+    text-align: center;
+}
+
+main{
+    min-height:70vh;
+    display: flex;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+header p {
+    color: var(--accent)
+}
+
+.card {
+    border: 1px dashed var(--accent);
+    flex:1 0 30%;
+    margin:10px;
+    padding:0 20px 20px 20px;
+    transition: box-shadow 0.7s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card h2{
+    border:1px solid var(--accent);
+    margin:0 auto;
+    position: relative;
+    bottom:18px;
+    padding:5px;
+    border-radius: 5px;
+    background-color: var(--primary);
+    transition: box-shadow 0.7s;
+}
+
+pre {
+    background: linear-gradient(gray 0 ,var(--secondary) 66%);
+    /* background:linear-gradient(120deg, deeppink 0%,deeppink 50%,deepskyblue 50%); */
+    white-space: pre-wrap;
+    color: var(--accent);
+    border-radius: 5px;
+    font-family:monospace;
+    user-select: all;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    font-size:16px;
+}
+
+.card:hover, .card:hover h2{
+    box-shadow:0px 0px 10px 4px var(--secondary), 
+    0px 0px 10px 4px var(--secondary) inset;
+    
+}
+
+pre::selection{
+    background:aqua;
+}
+
+@media screen and (max-width:996px) {
+    .card {
+        flex-basis: 45%;
+    }
+}
+@media screen and (max-width:768px) {
+    .card {
+        flex-basis: 95%;
+    }
+}
