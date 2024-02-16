@@ -19,6 +19,10 @@ body {
 header,footer {
     min-height: 15vh;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 main{
